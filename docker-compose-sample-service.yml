@@ -1,0 +1,16 @@
+version: "2"
+services:
+  sample-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.sample-service
+    image: sample-service-image:latest
+    network_mode: bridge
+    entrypoint:
+      - /bin/entrypoint.sh
+    environment:
+      # controls whether to use http/ws or https/wss
+      PURPOSE_OF_LIFE: "eat, drink and sleep :)"
+      SERVICE_PORT: "5001"
+    ports:
+      - "5001:5001"
