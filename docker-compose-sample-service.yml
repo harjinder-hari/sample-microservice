@@ -11,6 +11,6 @@ services:
     environment:
       # controls whether to use http/ws or https/wss
       PURPOSE_OF_LIFE: "eat, drink and sleep :)"
-      SERVICE_PORT: "5001"
+      SERVICE_PORT: "6162"
     ports:
-      - "5001:5001"
+      - "6162:6162"

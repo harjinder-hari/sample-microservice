@@ -25,5 +25,11 @@ def heart_beat():
     return flask.jsonify({"PurposeOfLife": config.PURPOSE_OF_LIFE})
 
 
+@app.route('/give_back', methods=['POST'])
+def predict_and_score():
+    input_json = request.get_json()
+    return flask.jsonify(input_json)
+
+
 if __name__ == "__main__":
     app.run()
