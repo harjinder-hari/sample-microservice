@@ -1,6 +1,6 @@
 To start microservice, first we need to create a docker image:
 ```
-docker build -t sample-service-image -f Dockerfile.sample-service .
+docker-compose -f docker-compose-sample-service.yml build sample-service
 ```
 
 Then start the container by using docker-compose:
