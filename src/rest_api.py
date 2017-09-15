@@ -24,6 +24,9 @@ CORS(app)
 def heart_beat():
     return flask.jsonify({"PurposeOfLife": config.PURPOSE_OF_LIFE})
 
+@app.route('/real')
+def heart_test():
+    return flask.jsonify({"PurposeOfLife": "Chicken"})
 
 @app.route('/give_back', methods=['POST'])
 def predict_and_score():
